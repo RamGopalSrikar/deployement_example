@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static "css/userdetails/mycss.css" %}">
+  </head>
+  <body>
+    <h1>Hello world here, are the user details</h1>
+    {% if names %}
+
+    <ol>
+      {% for nam in names%}
+      <li> userinfo</li>
+      <ul>
+        <li>first name = {{ nam.first_name }}</li>
+        <li>last name ={{nam.last_name}}</li>
+        <li>email={{nam.email}}</li>
+      </ul>
+      {% endfor %}
+    </ol>
+
+    {% endif %}
+
+  </body>
+</html>
